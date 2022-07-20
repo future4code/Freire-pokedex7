@@ -17,7 +17,7 @@ export const DetailList = () => {
   // const [image, setImage] = useState({});
   // const [moves, setMoves] = useState([]);
 
-  const { stats, moves, image } = useContext(PokeContext);
+  const { stats, image } = useContext(PokeContext);
 
   // const getDetails = () => {
   //   axios.get(`${BASE_URL}/pokemon/bulbasaur`).then((res) => {
