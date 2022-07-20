@@ -9,13 +9,33 @@ const PokeProvider = (props) => {
   const [stats, setStats] = useState([]);
   const [image, setImage] = useState({});
   const [moves, setMoves] = useState([]);
+  // const [name, setName] = useState([]);
+  // const [types, setTypes] = useState([]);
+  // const [id, setId] = useState([]);
+
+
+  const getPokemons = () => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon/1`)
+    .then((res) => {
+      // setId(res.data.id);
+      // setName(res.data.name);
+      // setTypes(res.data.types);
+      // console.log(res.data.id);
+      // console.log(res.data.name);
+      console.log(res.data);
+    });
+  };
+
+  useEffect(() => {
+    getPokemons();
+  }, []);
 
   const getDetails = () => {
     axios.get(`${BASE_URL}/pokemon/bulbasaur`).then((res) => {
       setStats(res.data.stats);
       setImage(res.data.sprites);
       setMoves(res.data.moves);
-      //   console.log(res.data.moves.length);
+        // console.log(res.data.name);
       //   console.log(res.data.moves);
     });
   };
@@ -36,6 +56,12 @@ const PokeProvider = (props) => {
         setImage,
         moves,
         setMoves,
+        // name,
+        // setName,
+        // types,
+        // setTypes,
+        // id,
+        // setId
       }}
     >
       {props.children}
