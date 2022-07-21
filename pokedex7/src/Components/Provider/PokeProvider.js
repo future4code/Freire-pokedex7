@@ -10,6 +10,7 @@ const PokeProvider = (props) => {
   const [image, setImage] = useState({});
   const [moves, setMoves] = useState([]);
 
+
   const getDetails = () => {
     axios.get(`${BASE_URL}/pokemon/bulbasaur`).then((res) => {
       setStats(res.data.stats);
