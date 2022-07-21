@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
   background-color: ${(props) => {
     switch (props.backgroundColor) {
       case 'grass':
-        return 'green';
+        return '#008506';
       case 'bug':
         return 'lightgreen';
       case 'poison':
@@ -23,7 +23,7 @@ export const CardContainer = styled.div`
       case 'fighting':
         return 'blue';
       case 'fire':
-        return 'blue';
+        return '#ff120f';
       case 'ghost':
         return 'red';
       case 'ground':
