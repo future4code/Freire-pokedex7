@@ -1,7 +1,15 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { BASE_URL } from '../../constants/baseUrl';
-import { CardContainer, Main, TextContainer, ImageContainer, TypeText, Button } from './style';
+import {
+  CardContainer,
+  Main,
+  TextContainer,
+  Types,
+  ImageContainer,
+  TypeText,
+  Button,
+} from './style';
 
 const Card = (props) => {
   const [photo, setPhoto] = useState({});
@@ -21,29 +29,27 @@ const Card = (props) => {
     getPokemonCard();
   }, []);
 
-  const listTypes = type.map((item) => {
-    return <TypeText>{item.type.name}</TypeText>;
+  const listTypes = type.map((item, index) => {
+    return <TypeText key={index}>{item.type.name}</TypeText>;
   });
 
   return (
     <CardContainer>
       <Main>
         <TextContainer>
-        <h3>#{order}</h3>
-        <h1>{props.name}</h1>
-        {listTypes}
-      </TextContainer>
-
-      <ImageContainer>
-        <img src={photo} />
-      </ImageContainer>
+          <h3>#{order}</h3>
+          <h1>{props.name}</h1>
+          <div>{listTypes}</div>
+        </TextContainer>
+        <ImageContainer>
+          <img src={photo} />
+        </ImageContainer>
       </Main>
-      
+
       <Button>
-        <button>Teste</button>
-      <button>Teste</button>
+        <button className="detalhes">Detalhes</button>
+        <button className="capturar">Capturar</button>
       </Button>
-      
     </CardContainer>
   );
 };
