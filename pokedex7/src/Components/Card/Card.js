@@ -1,7 +1,8 @@
-import axios from 'axios';
-import { useState, useEffect, useContext } from 'react';
-import { BASE_URL } from '../../constants/baseUrl';
-import { PokeContext } from '../Context/PokeContext';
+import axios from "axios";
+import { useState, useEffect, useContext } from "react";
+import { BASE_URL } from "../../constants/baseUrl";
+import { PokeContext } from "../Context/PokeContext";
+// import { IconsType } from "../Card/IconsType";
 // import { DetailList } from "../../pages/DetailList/DetailList";
 
 import {
@@ -12,18 +13,18 @@ import {
   ImageContainer,
   TypeText,
   Button,
-} from './style';
+} from "./style";
 
 const Card = (props) => {
   const [photo, setPhoto] = useState({});
   const [type, setType] = useState([]);
-  const [order, setOrder] = useState('');
+  const [order, setOrder] = useState("");
   const { pokedex, setPokedex } = useContext(PokeContext);
 
   const AddPokemon = (pokemon) => {
     const newArray = [...pokedex, pokemon];
     setPokedex(newArray);
-    console.log('funcionou');
+    console.log("funcionou");
   };
 
   // const DisableAfterClick() => {
@@ -50,8 +51,12 @@ const Card = (props) => {
   }, []);
 
   const listTypes = type.map((item, index) => {
-    return <TypeText backgroundColor={type[0]?.type?.name}
-    key={index}>{item.type.name}</TypeText>;
+    return (
+      <TypeText backgroundColor={item.type.name} key={index}>
+        {/* <IconsType img={item.type.name} /> */}
+        {item.type.name}
+      </TypeText>
+    );
   });
 
   return (
@@ -63,7 +68,7 @@ const Card = (props) => {
           <div>{listTypes}</div>
         </TextContainer>
         <ImageContainer>
-          <img src={photo} />
+          <img src={photo} alt={props.name}/>
         </ImageContainer>
       </Main>
 
