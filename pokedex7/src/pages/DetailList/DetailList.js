@@ -64,7 +64,11 @@ export const DetailList = () => {
         </FrontBack>
         <Stats>{renderStats}</Stats>
         <div>
+<<<<<<< HEAD
           {/* <img src={image.other.dream_world.front_default} /> */}
+=======
+          <img src={image.other.dream_world.front_default} />
+>>>>>>> f78896085900c20fde737bfbecd02b103c0c57d0
           {/* <p>{renderMoves(moves)}</p> */}
         </div>
       </Container>
