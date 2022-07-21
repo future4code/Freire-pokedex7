@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const CardContainer = styled.div`
   background-color: #0000ff;
-  width: 350px;
-  height: 250px;
-  padding: 8px;
+  width: 440px;
+  height: 200px;
+  padding: 12px;
   border: none;
   display: flex;
   flex-direction: column;
@@ -13,14 +13,18 @@ export const CardContainer = styled.div`
 
 export const Main = styled.div`
   display: flex;
-`
+`;
 
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  /* gap: 8px; */
+  width: 200px;
+  height: 150px;
+  color: #ffffff;
+  margin: 0px;
   h1 {
-    margin: 0px;
+    margin: 0px 0px 8px 0px;
   }
   h3 {
     margin: 0px;
@@ -28,23 +32,32 @@ export const TextContainer = styled.div`
   p {
     margin: 0px;
   }
+  div {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
 `;
 
 export const TypeText = styled.p`
   padding: 8px 16px;
   background-color: #ff0000;
   border-radius: 4px;
-`
+`;
 
 export const ImageContainer = styled.div`
-display: flex;
-flex-direction: column-reverse;
-position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
   img {
     width: 180px;
+    height: 180px;
     position: absolute;
-    top: -50px;
-    right: -250px;
+    margin: 0px;
+    padding: 0px;
+    top: -30px;
+    /* right: -250px; */
+    left: 40px;
   }
 `;
 
@@ -52,4 +65,20 @@ export const Button = styled.div`
   display: flex;
   justify-content: space-around;
   margin: auto 0px;
-`
+  button {
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  .detalhes {
+    background-color: #00000000;
+    text-decoration: underline;
+    color: #ffffff;
+  }
+  .capturar {
+    background-color: #ffffff;
+  }
+`;
