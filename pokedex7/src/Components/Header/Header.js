@@ -7,8 +7,13 @@ import {
   BotaoSimples,
   BotaoPokedex,
 } from './styles';
+import { useNavigate } from 'react-router-dom'
+import { goToPokedex } from '../../Routes/Coordinator';
 
 const Header = () => {
+
+  const navigate = useNavigate()
+
   return (
     <Background>
       <Container>
@@ -18,7 +23,9 @@ const Header = () => {
           </p>
         </BotaoSimples>
         <PokeLogo src={pokeLogo} />
-        <BotaoPokedex>Pokedex</BotaoPokedex>
+        <BotaoPokedex
+        onClick={() => goToPokedex(navigate)}
+        >Pokedex</BotaoPokedex>
       </Container>
     </Background>
   );

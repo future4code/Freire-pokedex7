@@ -1,30 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import PokeCard from '../../Components/PokeCard/pokeCard';
+import Header from '../../Components/Header/Header'
 
-const AppContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  padding: 15px;
-`;
+const HomePage = styled.div`
+  color: #FFFFFF;
+  background-color: #5E5E5E;
+  padding: 12px;  
+`
 
 export const Home = () => {
   return (
-    <div>
-      <AppContainer>
-        <h2>Logo pokemon</h2>
-        <Link to={'/pokedex'}>
-          <button>Pokedex</button>
-        </Link>
-      </AppContainer>
-      <p>Card dos Pokemons</p>
-      <Link to={'/detail'}>
-        <button>Detalhes</button>
-      </Link>
+    <HomePage>
+      <Header/>
+      <h1>Todos os Pokemons</h1>     
       <PokeCard />
-    </div>
+    </HomePage>
   );
 };

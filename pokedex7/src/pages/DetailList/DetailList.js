@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 // import { BASE_URL } from '../../constants/baseUrl';
 import { Link } from "react-router-dom";
 import { PokeContext } from "../../Components/Context/PokeContext";
+import Header from "../../Components/Header/Header";
 import {
   Container,
   FrontBack,
@@ -49,6 +50,7 @@ export const DetailList = () => {
 
   return (
     <div>
+      <Header/>
       <Link to={"/"}>
         <button>Voltar</button>
       </Link>

@@ -2,6 +2,8 @@ import axios from 'axios';
 import { useState, useEffect, useContext } from 'react';
 import { BASE_URL } from '../../constants/baseUrl';
 import { PokeContext } from '../Context/PokeContext';
+import { useNavigate } from 'react-router-dom'
+import { goToDetailPage } from '../../Routes/Coordinator';
 // import { DetailList } from "../../pages/DetailList/DetailList";
 
 import {
@@ -25,6 +27,8 @@ const Card = (props) => {
     setPokedex(newArray);
     console.log('funcionou');
   };
+
+  const navigate = useNavigate()
 
   // const DisableAfterClick() => {
   //   const [disable, setDisable] = React.useState(false);
@@ -67,7 +71,9 @@ const Card = (props) => {
       </Main>
 
       <Button>
-        <button className="detalhes">Detalhes</button>
+        <button className="detalhes" 
+        onClick={() => goToDetailPage(navigate)}
+        >Detalhes</button>
         <button onClick={() => AddPokemon()} className="capturar">
           Capturar
         </button>
