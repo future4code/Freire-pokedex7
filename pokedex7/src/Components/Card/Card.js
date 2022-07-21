@@ -1,6 +1,9 @@
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import { BASE_URL } from '../../constants/baseUrl';
+import axios from "axios";
+import { useState, useEffect, useContext } from "react";
+import { BASE_URL } from "../../constants/baseUrl";
+import { PokeContext } from "../Context/PokeContext";
+// import { DetailList } from "../../pages/DetailList/DetailList";
+
 import {
   CardContainer,
   Main,
@@ -9,12 +12,29 @@ import {
   ImageContainer,
   TypeText,
   Button,
-} from './style';
+} from "./style";
 
 const Card = (props) => {
   const [photo, setPhoto] = useState({});
   const [type, setType] = useState([]);
-  const [order, setOrder] = useState('');
+  const [order, setOrder] = useState("");
+  const { pokedex, setPokedex } = useContext(PokeContext);
+
+  const AddPokemon = (pokemon) => {
+    const newArray = [...pokedex, pokemon];
+    setPokedex(newArray);
+    console.log("funcionou");
+  };
+
+  // const DisableAfterClick() => {
+  //   const [disable, setDisable] = React.useState(false);
+  
+  //   return (
+  //     <button disabled={disable} onClick={() => setDisable(true)}>
+  //       Click to Disable!
+  //     </button>
+  //   );
+  // }
 
   const getPokemonCard = () => {
     axios.get(`${BASE_URL}/pokemon/${props.name}`).then((res) => {
@@ -50,7 +70,9 @@ const Card = (props) => {
 
       <Button>
         <button className="detalhes">Detalhes</button>
-        <button className="capturar">Capturar</button>
+        <button onClick={() => AddPokemon()} className="capturar">
+          Capturar
+        </button>
       </Button>
     </CardContainer>
   );
