@@ -18,7 +18,7 @@ const Card = (props) => {
 
   const getPokemonCard = () => {
     axios.get(`${BASE_URL}/pokemon/${props.name}`).then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       setPhoto(res.data.sprites.other.dream_world.front_default);
       setType(res.data.types);
       setOrder(res.data.order);
@@ -33,8 +33,10 @@ const Card = (props) => {
     return <TypeText key={index}>{item.type.name}</TypeText>;
   });
 
+  console.log(type);
+
   return (
-    <CardContainer>
+    <CardContainer backgroundColor={type[0].type.name}>
       <Main>
         <TextContainer>
           <h3>#{order}</h3>

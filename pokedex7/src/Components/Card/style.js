@@ -1,7 +1,47 @@
 import styled from 'styled-components';
 
 export const CardContainer = styled.div`
-  background-color: #0000ff;
+  /* background-color: #0000ff; */
+  background-color: ${(props) => {
+    switch (props.backgroundColor) {
+      case 'grass':
+        return 'green';
+      case 'bug':
+        return 'lightgreen';
+      case 'poison':
+        return 'red';
+      case 'flying':
+        return 'red';
+      case 'dark':
+        return 'blue';
+      case 'dragon':
+        return 'red';
+      case 'electric':
+        return 'blue';
+      case 'fairy':
+        return 'red';
+      case 'fighting':
+        return 'blue';
+      case 'fire':
+        return 'blue';
+      case 'ghost':
+        return 'red';
+      case 'ground':
+        return 'blue';
+      case 'ice':
+        return 'red';
+      case 'normal':
+        return 'gray';
+      case 'psychic':
+        return 'red';
+      case 'rock':
+        return 'red';
+      case 'steel':
+        return 'blue';
+      case 'water':
+        return 'red';
+    }
+  }};
   width: 440px;
   height: 200px;
   padding: 12px;
