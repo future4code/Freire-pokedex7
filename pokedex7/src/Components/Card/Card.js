@@ -50,7 +50,8 @@ const Card = (props) => {
   }, []);
 
   const listTypes = type.map((item, index) => {
-    return <TypeText key={index}>{item.type.name}</TypeText>;
+    return <TypeText backgroundColor={type[0]?.type?.name}
+    key={index}>{item.type.name}</TypeText>;
   });
 
   return (
