@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import { PokeContext } from "../Context/PokeContext";
 
@@ -28,4 +27,3 @@ const PokeCard = () => {
 };
 
 export default PokeCard;
-

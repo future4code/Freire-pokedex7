@@ -1,8 +1,8 @@
-import { PokeContext } from "../Context/PokeContext";
-import { useState } from "react";
-import { BASE_URL } from "../../constants/baseUrl";
-import axios from "axios";
-import { useEffect } from "react";
+import { PokeContext } from '../Context/PokeContext';
+import { useState } from 'react';
+import { BASE_URL } from '../../constants/baseUrl';
+import axios from 'axios';
+import { useEffect } from 'react';
 
 const PokeProvider = (props) => {
   const [pokedex, setPokedex] = useState([]);
@@ -14,16 +14,14 @@ const PokeProvider = (props) => {
   // const [types, setTypes] = useState([]);
   // const [id, setId] = useState([]);
 
-
   const getPokemons = () => {
-    axios.get(`https://pokeapi.co/api/v2/pokemon/1`)
-    .then((res) => {
+    axios.get(`https://pokeapi.co/api/v2/pokemon/`).then((res) => {
       // setId(res.data.id);
       // setName(res.data.name);
       // setTypes(res.data.types);
       // console.log(res.data.id);
       // console.log(res.data.name);
-      console.log(res.data);
+      // console.log(res.data);
     });
   };
 
@@ -36,10 +34,8 @@ const PokeProvider = (props) => {
       setStats(res.data.stats);
       setImage(res.data.sprites);
       setMoves(res.data.moves);
-
     });
   };
- 
 
   useEffect(() => {
     getDetails();
@@ -63,7 +59,6 @@ const PokeProvider = (props) => {
         // setTypes,
         // id,
         // setId
-
       }}
     >
       {props.children}
