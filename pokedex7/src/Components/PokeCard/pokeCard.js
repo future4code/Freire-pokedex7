@@ -1,3 +1,7 @@
+
+// import React from "react";
+// import { PokeContext } from "../Context/PokeContext";
+
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BASE_URL } from '../../constants/baseUrl';
@@ -24,3 +28,4 @@ const PokeCard = () => {
 };
 
 export default PokeCard;
+
