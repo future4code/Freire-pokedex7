@@ -1,40 +1,26 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BASE_URL } from '../../constants/baseUrl';
+import Card from '../Card/Card';
+import { Container } from './style';
 
 const PokeCard = () => {
-  const [todosPokemons, setTodosPokemons] = useState([]);
+  const [pokemons, setPokemons] = useState([]);
 
   const getPokemons = () => {
     axios.get(`${BASE_URL}/pokemon/`).then((res) => {
-      setTodosPokemons(res.data.results);
-      // console.log(res.data);
+      setPokemons(res.data.results);
     });
   };
   useEffect(() => {
     getPokemons();
   }, []);
 
-  const mudaPokemon = todosPokemons.map((pokemon, index) => {
-    return <p key={index}>{index + 1}</p>;
+  const listPokemons = pokemons.map((pokemon) => {
+    return <Card key={pokemon.name} name={pokemon.name} />;
   });
-  const getPokemonsByName = (index) => {
-    axios.get(`${BASE_URL}/pokemon/${mudaPokemon}`).then((res) => {
-      console.log(res.data);
-    });
-  };
-  useEffect(() => {
-    getPokemonsByName();
-  }, []);
 
-
-  return (
-    <div>
-      <h1>{todosPokemons.name}</h1>
-      {/* {renderPokemons} */}
-      {mudaPokemon}
-    </div>
-  );
+  return <Container>{listPokemons}</Container>;
 };
 
 export default PokeCard;
