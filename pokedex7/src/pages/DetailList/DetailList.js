@@ -56,10 +56,6 @@ export const DetailList = () => {
   return (
     <div>
       <Header />
-      <Link to={'/'}>
-        <button>Voltar</button>
-      </Link>
-      <p>Aqui vao aparecer os detalhes de pokemon em questao</p>
       <Container>
         <FrontBack>
           <div>
