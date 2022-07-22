@@ -87,7 +87,9 @@ const Card = (props) => {
       <Button>
         <button
           className="detalhes"
-          onClick={() => goToDetailPage(navigate(`/${props.name}`))}
+          onClick={() => {
+            goToDetailPage(navigate(`details/${props.name}`));
+          }}
         >
           Detalhes
         </button>
