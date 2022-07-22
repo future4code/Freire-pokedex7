@@ -15,6 +15,7 @@ const PokeCard = () => {
       setPokemons(res.data.results);
     });
   };
+
   useEffect(() => {
     getPokemons();
   }, []);

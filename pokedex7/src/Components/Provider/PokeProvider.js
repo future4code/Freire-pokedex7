@@ -3,12 +3,17 @@ import { useState } from 'react';
 import { BASE_URL } from '../../constants/baseUrl';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 
 const PokeProvider = (props) => {
   const [pokedex, setPokedex] = useState([]);
   const [stats, setStats] = useState([]);
   const [image, setImage] = useState({});
   const [moves, setMoves] = useState([]);
+  const [order, setOrder] = useState('');
+
+  const pathParams = useParams();
+  const pokeName = pathParams.pokeName;
 
   // const [name, setName] = useState([]);
   // const [types, setTypes] = useState([]);
@@ -34,6 +39,8 @@ const PokeProvider = (props) => {
       setStats(res.data.stats);
       setImage(res.data.sprites);
       setMoves(res.data.moves);
+      setOrder(res.data.order);
+      // console.log(res.data);
     });
   };
 
@@ -52,6 +59,7 @@ const PokeProvider = (props) => {
         setImage,
         moves,
         setMoves,
+        order,
 
         // name,
         // setName,
