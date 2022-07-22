@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import { PokeContext } from '../../Components/Context/PokeContext';
 import Header from '../../Components/Header/Header';
 import {
+  BackgroundDetail,
   Container,
   FrontBack,
   Stats,
@@ -12,6 +13,7 @@ import {
   NameStat,
   BaseStat,
 } from './styles';
+import { Background } from '../../Components/Header/styles';
 
 export const DetailList = () => {
   const pathParams = useParams();
@@ -56,33 +58,38 @@ export const DetailList = () => {
   return (
     <div>
       <Header />
-      <Container>
-        <FrontBack>
+
+      <BackgroundDetail>
+        <Container>
+          <FrontBack>
+            <div>
+              <img
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`}
+                alt=""
+              />
+            </div>
+          </FrontBack>
+          <Stats>{renderStats}</Stats>
+
           <div>
+            {/* <img src={image.other.dream_world.front_default} /> */}
+
             <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
               alt=""
             />
-          </div>
-          <div>
-            <img
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/${id}.png`}
-              alt=""
-            />
-          </div>
-        </FrontBack>
-        <Stats>{renderStats}</Stats>
-        <div>
-          {/* <img src={image.other.dream_world.front_default} /> */}
 
-          <img
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
-            alt=""
-          />
+            {/* <p>{renderMoves(moves)}</p> */}
+          </div>
+        </Container>
+      </BackgroundDetail>
 
-          {/* <p>{renderMoves(moves)}</p> */}
-        </div>
-      </Container>
       {/* <div>
         <img src={image.other.official-artwork.front_default} />
       </div> */}

@@ -97,7 +97,7 @@ const Card = (props) => {
             // setDellButton(true);
 
             // goToDetailPage(navigate);
-            console.log(pokedex);
+            console.log(pokedex.length);
           }}
           className="capturar"
         >
