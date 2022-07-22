@@ -15,16 +15,22 @@ import {
 
 export const DetailList = () => {
   const pathParams = useParams();
-  const pokeName = pathParams.pokeName;
+  const poke = pathParams.poke;
+  const [image, setImage] = useState();
   const [stats, setStats] = useState([]);
   const [id, setId] = useState('');
+  console.log(poke);
 
   // const { stats, image, moves, order } = useContext(PokeContext);
 
   const getDetails = () => {
-    axios.get(`${BASE_URL}/pokemon/${pokeName}`).then((res) => {
+    axios.get(`${BASE_URL}/pokemon/${poke}`).then((res) => {
       setStats(res.data.stats);
       setId(res.data.id);
+      // setImage(
+      //   res.data.sprites.versions['generation-v']['black-white'].animated
+      //     .front_default
+      // );
       console.log(res.data);
     });
   };

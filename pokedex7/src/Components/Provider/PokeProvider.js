@@ -12,9 +12,6 @@ const PokeProvider = (props) => {
   const [moves, setMoves] = useState([]);
   const [order, setOrder] = useState('');
 
-  const pathParams = useParams();
-  const pokeName = pathParams.pokeName;
-
   // const [name, setName] = useState([]);
   // const [types, setTypes] = useState([]);
   // const [id, setId] = useState([]);

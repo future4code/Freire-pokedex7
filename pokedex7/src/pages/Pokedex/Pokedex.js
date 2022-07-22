@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import Card from '../../Components/Card/Card';
 import { PokeContext } from '../../Components/Context/PokeContext';
 import Header from '../../Components/Header/Header';
 import { BASE_URL } from '../../constants/baseUrl';
@@ -12,7 +13,11 @@ export const Pokedex = () => {
   console.log(pokedex);
 
   const renderPokedex = pokedex.map((pokemon) => {
-    return <p key={pokemon}>{pokemon}</p>;
+    return (
+      <div key={pokemon}>
+        <Card name={pokemon} />
+      </div>
+    );
   });
 
   return (
