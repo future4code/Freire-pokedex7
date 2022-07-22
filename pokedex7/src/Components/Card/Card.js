@@ -20,7 +20,6 @@ import {
 import { Pokedex } from '../../pages/Pokedex/Pokedex';
 
 const Card = (props) => {
-  const [photo, setPhoto] = useState({});
   const [type, setType] = useState([]);
   const [id, setId] = useState('');
   const [pokemon, setPokemon] = useState({});
@@ -46,7 +45,6 @@ const Card = (props) => {
 
   const getPokemonCard = () => {
     axios.get(`${BASE_URL}/pokemon/${props.name}`).then((res) => {
-      setPhoto(res.data?.sprites?.other?.dream_world?.front_default);
       setType(res.data.types);
       setId(res.data.id);
       setPokemon(res.data);
@@ -96,6 +94,8 @@ const Card = (props) => {
         <button
           onClick={() => {
             setPokedex([...pokedex, props.name]);
+            // setDellButton(true);
+
             // goToDetailPage(navigate);
             console.log(pokedex);
           }}
