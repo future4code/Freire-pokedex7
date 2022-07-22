@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Background = styled.div`
-  /* background-color: #4c4c4c; */
+  background-color: #FFFFFF;
 `;
 
 export const Container = styled.div`
-  /* background-color: #4c4c4c; */
+  background-color: #FFFFFF;
   box-sizing: border-box;
   max-width: 1280px;
   padding: 8px 16px;
@@ -39,4 +39,5 @@ export const BotaoPokedex = styled.button`
   font-size: 20px;
   color: #ffffff;
   background-color: #0077b6;
+  cursor: pointer;
 `;

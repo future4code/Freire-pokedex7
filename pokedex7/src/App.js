@@ -6,7 +6,7 @@ import PokeProvider from "./Components/Provider/PokeProvider";
 function App() {
   return (
     <PokeProvider>
-      <Header />
+      {/* <Header /> */}
       <Router />
     </PokeProvider>
   );
