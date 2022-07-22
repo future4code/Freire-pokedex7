@@ -1,60 +1,60 @@
-import {iconeBug} from "../../img/iconeBug.png";
-import {iconeDark} from "../../img/iconeDark.png";
-import {iconeDragon} from "../../img/iconeDragon.png";
-import {iconeEletric} from "../../img/iconeEletric.png";
-import {iconeFairy} from "../../img/iconeFairy.png";
-import {iconeFighting} from "../../img/iconeFighting.png";
-import {iconeFire} from "../../img/iconeFire.png";
-import {iconeFlying} from "../../img/iconeFlying.png";
-import {iconeGhost} from "../../img/iconeGhost.png";
-import {iconeGrass} from "../../img/iconeGrass.png";
-import {iconeGround} from "../../img/iconeGround.png";
-import {iconeIce} from "../../img/iconeIce.png";
-import {iconeNormal} from "../../img/iconeNormal.png";
-import {iconePoison} from "../../img/iconePoison.png";
-import {iconePsychic} from "../../img/iconePsychic.png";
-import {iconeRock} from "../../img/iconeRock.png";
-import {iconeSteel} from "../../img/iconeSteel.png";
-import {iconeWater} from "../../img/iconeWater.png";
+import { iconeBug } from '../../img/iconeBug.png';
+import { iconeDark } from '../../img/iconeDark.png';
+import { iconeDragon } from '../../img/iconeDragon.png';
+import { iconeEletric } from '../../img/iconeEletric.png';
+import { iconeFairy } from '../../img/iconeFairy.png';
+import { iconeFighting } from '../../img/iconeFighting.png';
+import { iconeFire } from '../../img/iconeFire.png';
+import { iconeFlying } from '../../img/iconeFlying.png';
+import { iconeGhost } from '../../img/iconeGhost.png';
+import { iconeGrass } from '../../img/iconeGrass.png';
+import { iconeGround } from '../../img/iconeGround.png';
+import { iconeIce } from '../../img/iconeIce.png';
+import { iconeNormal } from '../../img/iconeNormal.png';
+import { iconePoison } from '../../img/iconePoison.png';
+import { iconePsychic } from '../../img/iconePsychic.png';
+import { iconeRock } from '../../img/iconeRock.png';
+import { iconeSteel } from '../../img/iconeSteel.png';
+import { iconeWater } from '../../img/iconeWater.png';
 
-const IconsType = (props)=> {
- switch (props.img) {
+const IconsType = (props) => {
+  switch (props.img) {
     case 'grass':
-      return {iconeGrass};
+      return { iconeGrass };
     case 'bug':
-      return {iconeBug};
+      return { iconeBug };
     case 'poison':
-      return {iconePoison};
+      return { iconePoison };
     case 'flying':
-      return {iconeFlying};
+      return { iconeFlying };
     case 'dark':
-      return {iconeDark};
+      return { iconeDark };
     case 'dragon':
-      return {iconeDragon};
+      return { iconeDragon };
     case 'electric':
-      return {iconeEletric};
+      return { iconeEletric };
     case 'fairy':
-      return {iconeFairy};
+      return { iconeFairy };
     case 'fighting':
-      return{iconeFighting};
+      return { iconeFighting };
     case 'fire':
-      return {iconeFire};
+      return { iconeFire };
     case 'ghost':
-      return {iconeGhost};
+      return { iconeGhost };
     case 'ground':
-      return{iconeGround};
+      return { iconeGround };
     case 'ice':
-      return {iconeIce};
+      return { iconeIce };
     case 'normal':
-      return {iconeNormal};
+      return { iconeNormal };
     case 'psychic':
-      return {iconePsychic};
+      return { iconePsychic };
     case 'rock':
-      return {iconeRock};
+      return { iconeRock };
     case 'steel':
-      return {iconeSteel};
+      return { iconeSteel };
     case 'water':
-      return {iconeWater};
+      return { iconeWater };
   }
-}
+};
 export default IconsType;
