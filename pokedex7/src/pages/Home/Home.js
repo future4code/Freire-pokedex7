@@ -13,7 +13,6 @@ export const Home = () => {
   return (
     <HomePage>
       <Header />
-      <h1>Todos os Pokemons</h1>
       <PokeCard />
     </HomePage>
   );

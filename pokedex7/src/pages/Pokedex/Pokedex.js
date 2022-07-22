@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Card from '../../Components/Card/Card';
 import { PokeContext } from '../../Components/Context/PokeContext';
 import Header from '../../Components/Header/Header';
+import { Container, Background } from './style';
 import { BASE_URL } from '../../constants/baseUrl';
 // import {pokeCard} from "../../Components/PokeCard/pokeCard";
 // import { goToDetailPage } from "../../Routes/Coordinator";
@@ -23,11 +24,9 @@ export const Pokedex = () => {
   return (
     <div>
       <Header />
-      <Link to={'/'}>
-        <button>Voltar</button>
-      </Link>
-      <p>Aqui vao aparecer os pokemons do usuario</p>
-      {renderPokedex}
+      <Background>
+        <Container>{renderPokedex}</Container>
+      </Background>
     </div>
   );
 };
