@@ -21,6 +21,7 @@ export const Container = styled.div`
 export const BotaoSimples = styled.button`
   background-color: #00000000;
   border: none;
+  cursor: pointer;
   padding: 8px 16px;
   p {
     margin: 0px;

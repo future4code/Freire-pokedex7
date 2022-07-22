@@ -58,10 +58,7 @@ export const DetailList = () => {
   return (
     <div>
       <Header />
-      <Link to={'/'}>
-        <button>Voltar</button>
-      </Link>
-      <p>Aqui vao aparecer os detalhes de pokemon em questao</p>
+
       <BackgroundDetail>
         <Container>
           <FrontBack>
@@ -79,6 +76,7 @@ export const DetailList = () => {
             </div>
           </FrontBack>
           <Stats>{renderStats}</Stats>
+
           <div>
             {/* <img src={image.other.dream_world.front_default} /> */}
 
