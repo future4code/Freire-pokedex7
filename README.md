@@ -1,16 +1,16 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
-- Pessoa 2
-- Pessoa 3
+- Aline Gonçalves Fontes Chagas
+- Lorran Christo dos Santos
+- Paulo Gabriel Mendes dos Santos
 
-Link do Surge: www.link.com.br
+Link do Surge: dramatic-good-bye.surge.sh
 
 O que funciona:
-- Item 1
-- Item 2
+- botão capturar, botão detalhes, visualização da pokedex
+
 
 O que não funciona: 
-- Item 3
-- Item 4
+- não foi feito o botão "remover"
+- botão capturar não desativa após o clique
